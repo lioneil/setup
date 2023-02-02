@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+if [[ "$1" == "stop" ]] ; then
+  echo "Stopping web service: apache2"
+  service apache2 stop
+  echo "Stopping web service: mysql"
+  service mysql stop
+  echo "Done"
+  exit
+fi
+
+if [[ "$1" == "start" ]] ; then
+  echo "Starting web service: apache2"
+  service apache2 start
+  echo "Starting web service: mysql"
+  service mysql start
+  echo "Done"
+  exit
+fi
+
+if [[ "$1" == "restart" ]] ; then
+  echo "Restarting web service: apache2"
+  service apache2 restart
+  echo "Restarting web service: mysql"
+  service mysql restart
+  echo "Done"
+  exit
+fi

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+SRC="$1"
+DES="$2"
+rsync -av --exclude=vendor --exclude=.git --exclude=node_modules --exclude=.env --exclude=.env.local ${SRC} ${DES}
